@@ -364,3 +364,20 @@ Completed 200 OK in 64ms (Views: 48.0ms | ActiveRecord: 0.7ms)
 Started GET "/assets/original/default-4d452c63d330fa4ca5200c3fa437bfd595741d59846222f62704f02365fdbc6c.png" for 72.190.146.223 at 2017-12-15 20:29:16 +0000
 Cannot render console from 72.190.146.223! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE (avatar_file_name IS NOT NULL)  ORDER BY "authors"."id" ASC LIMIT 1000[0m
+
+
+Started GET "/authors" for 72.190.146.223 at 2017-12-15 20:30:13 +0000
+Cannot render console from 72.190.146.223! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (263.8ms)
+Completed 200 OK in 314ms (Views: 295.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/new" for 72.190.146.223 at 2017-12-15 20:30:19 +0000
+Cannot render console from 72.190.146.223! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#new as HTML
+  Rendered authors/_form.html.erb (31.0ms)
+  Rendered authors/new.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.0ms)
